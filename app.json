@@ -1,16 +1,27 @@
 {
   "expo": {
+    "jsEngine": "hermes",
     "name": "Haze",
     "slug": "Haze",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Haze to access your photos.",
+          "savePhotosPermission": "Allow Haze to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -23,11 +34,17 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#000000"
+      },
+      "package": "com.pixel3user.Haze"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fd7d1f0e-e408-4b14-9c66-526955648542"
+      }
     }
   }
 }
